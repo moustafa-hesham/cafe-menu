@@ -1,3 +1,13 @@
+:root{
+    --main-color: #800020;
+    --white-color: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Default background for mobile (below 768px) */
 body {
     font-family: Arial, sans-serif;
@@ -5,7 +15,7 @@ body {
     background-repeat: no-repeat;
     background-position: left top;
     background-size: cover;
-   
+
 }
 
 /* Larger screen background (768px and up) */
@@ -14,9 +24,17 @@ body {
         background-image: url('../imgs/background-lg.png');
         background-position: left center;
         background-size: cover;
-        
     }
 }
+
+/* For smaller screens */
+@media (max-width: 767px) {
+    body {
+        margin: 0 0 10vh 0;
+
+    }
+}
+
 
 .logo {
     width: 100px;
@@ -45,7 +63,7 @@ body {
 
 .menu-item p {
     font-weight: bold;
-    color: #800020; 
+    color: var(--main-color); 
     margin: 0;
 }
 
@@ -53,6 +71,11 @@ body {
     background-color: #f8f9fa;
     padding: 10px 0;
     border-top: 1px solid #ddd;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
 }
 
 .footer p {
@@ -67,8 +90,8 @@ body {
 .footer .table-number {
     width: 40px;
     height: 40px;
-    background-color: #800020; 
-    color: #fff;
+    background-color: var(--main-color); 
+    color: var(--white-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -82,7 +105,7 @@ body {
     object-fit: cover;
 }
 .footer-text{
-    color: #800020;
+    color: var(--main-color); ;
 font-weight: bold;
 }
 
